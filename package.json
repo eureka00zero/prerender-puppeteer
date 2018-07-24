@@ -1,0 +1,43 @@
+{
+  "name": "prerender-browser",
+  "version": "0.0.1",
+  "description": "ftp chromium for install -g",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eureka00zero/prerender-puppeteer.git"
+  },
+  "author": "eureka_zero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eureka00zero/prerender-puppeteer/issues"
+  },
+  "homepage": "https://github.com/eureka00zero/prerender-puppeteer#readme",
+  "dependencies": {
+    "html-minifier": "^3.5.19",
+    "es6-promisify": "^6.0.0",
+    "pend": "^1.2.0",
+    "promise-limit": "^2.5.0",
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.18.0",
+    "portfinder": "^1.0.13",
+    "camel-case": "3.0.x",
+    "clean-css": "4.1.x",
+    "commander": "2.16.x",
+    "he": "1.1.x",
+    "param-case": "2.1.x",
+    "relateurl": "0.2.x",
+    "uglify-js": "3.4.x"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 3.0.0"
+  }
+}
