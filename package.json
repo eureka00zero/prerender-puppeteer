@@ -2,19 +2,21 @@
   "name": "prerender-browser",
   "version": "0.0.1",
   "description": "ftp chromium for install -g",
-  "main": "index.js",
+  "main": "./src/index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"mocha\"",
+    "dev": "marax dev",
+    "build": "marax lib",
     "install": "node install.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eureka00zero/prerender-puppeteer.git"
   },
-  "author": "eureka_zero",
+  "author": "eureka_zero <475032801@qq.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eureka00zero/prerender-puppeteer/issues"
