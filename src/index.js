@@ -1,3 +1,3 @@
-const Renderer = require('./lib/puppeteer')
+const Renderer = require('../lib/puppeteer')
 
 module.exports = Renderer
