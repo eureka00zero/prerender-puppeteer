@@ -1,70 +1,72 @@
 {
-  "name": "prerender-browser",
-  "version": "0.0.2",
-  "description": "ftp chromium for install -g",
-  "main": "./src/index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "puppeteer": {
-    "chromium_revision": "571375"
-  },
-  "scripts": {
-    "unit": "node test/test.js",
-    "debug-unit": "node --inspect-brk test/test.js",
-    "test-doclint": "node utils/doclint/check_public_api/test/test.js && node utils/doclint/preprocessor/test.js",
-    "test": "npm run lint --silent && npm run coverage && npm run test-doclint && npm run test-node6-transformer",
-    "install": "node install.js",
-    "lint": "([ \"$CI\" = true ] && eslint --quiet -f codeframe . || eslint .) && npm run tsc && npm run doc",
-    "doc": "node utils/doclint/cli.js",
-    "coverage": "cross-env COVERAGE=true npm run unit",
-    "test-node6-transformer": "node utils/node6-transform/test/test.js",
-    "build": "node utils/node6-transform/index.js",
-    "unit-node6": "node node6/test/test.js",
-    "tsc": "tsc -p .",
-    "prepublishOnly": "npm run build",
-    "apply-next-version": "node utils/apply_next_version.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eureka00zero/prerender-puppeteer.git"
-  },
-  "author": "eureka_zero <475032801@qq.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eureka00zero/prerender-puppeteer/issues"
-  },
-  "homepage": "https://github.com/eureka00zero/prerender-puppeteer#readme",
-  "dependencies": {
-    "debug": "^3.1.0",
-    "extract-zip": "^1.6.6",
-    "https-proxy-agent": "^2.2.1",
-    "mime": "^2.0.3",
-    "progress": "^2.0.0",
-    "proxy-from-env": "^1.0.0",
-    "rimraf": "^2.6.1",
-    "ws": "^5.1.1"
-  },
-  "devDependencies": {
-    "@types/debug": "0.0.30",
-    "@types/extract-zip": "^1.6.2",
-    "@types/mime": "^2.0.0",
-    "@types/node": "^8.0.26",
-    "@types/rimraf": "^2.0.2",
-    "@types/ws": "^3.0.2",
-    "commonmark": "^0.27.0",
-    "cross-env": "^5.0.5",
-    "eslint": "^4.19.1",
-    "esprima": "^4.0.0",
-    "minimist": "^1.2.0",
-    "ncp": "^2.0.0",
-    "pixelmatch": "^4.0.2",
-    "pngjs": "^3.3.3",
-    "text-diff": "^1.0.1",
-    "typescript": "~2.8.1"
-  },
-  "engines": {
-    "node": ">= 8.0.0",
-    "npm": ">= 3.0.0"
+    "name": "prerender-browser",
+    "version": "0.0.4",
+    "description": "ftp chromium for install -g",
+    "main": "./src/index.js",
+    "directories": {
+      "lib": "lib"
+    },
+    "scripts": {
+      "test": "echo \"mocha\"",
+      "dev": "marax dev",
+      "build": "marax lib",
+      "install": "node install.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/eureka00zero/prerender-puppeteer.git"
+    },
+    "author": "eureka_zero <475032801@qq.com>",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/eureka00zero/prerender-puppeteer/issues"
+    },
+    "homepage": "https://github.com/eureka00zero/prerender-puppeteer#readme",
+    "dependencies": {
+      "html-minifier": "^3.5.19",
+      "es6-promisify": "^6.0.0",
+      "pend": "^1.2.0",
+      "promise-limit": "^2.5.0",
+      "express": "^4.16.2",
+      "http-proxy-middleware": "^0.18.0",
+      "portfinder": "^1.0.13",
+      "camel-case": "3.0.x",
+      "clean-css": "4.1.x",
+      "commander": "2.16.x",
+      "he": "1.1.x",
+      "param-case": "2.1.x",
+      "relateurl": "0.2.x",
+      "uglify-js": "3.4.x",
+      "debug": "^3.1.0",
+      "extract-zip": "^1.6.6",
+      "https-proxy-agent": "^2.2.1",
+      "mime": "^2.0.3",
+      "progress": "^2.0.0",
+      "proxy-from-env": "^1.0.0",
+      "rimraf": "^2.6.1",
+      "ws": "^5.1.1"
+    },
+    "devDependencies": {
+      "@types/debug": "0.0.30",
+      "@types/extract-zip": "^1.6.2",
+      "@types/mime": "^2.0.0",
+      "@types/node": "^8.0.26",
+      "@types/rimraf": "^2.0.2",
+      "@types/ws": "^3.0.2",
+      "commonmark": "^0.27.0",
+      "cross-env": "^5.0.5",
+      "eslint": "^4.19.1",
+      "esprima": "^4.0.0",
+      "minimist": "^1.2.0",
+      "ncp": "^2.0.0",
+      "pixelmatch": "^4.0.2",
+      "pngjs": "^3.3.3",
+      "text-diff": "^1.0.1",
+      "typescript": "~2.8.1"
+    },
+    "engines": {
+      "node": ">= 8.0.0",
+      "npm": ">= 3.0.0"
+    }
   }
-}
+  
